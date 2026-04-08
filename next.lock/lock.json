@@ -1,0 +1,4 @@
+{
+  "https://cdn.jsdelivr.net/pyodide/v0.27.5/full/pyodide.mjs": { "integrity": "sha512-YrNtvrAK/jjjVTJdZGb7gIamkfA+6sbvfVPVNoF/q4XNidOI4DWXvJv5aX5mDXnLuj41QVwXhqsll5nA0P+Ktw==", "contentType": "text/javascript; charset=utf-8" },
+  "version": 1
+}
