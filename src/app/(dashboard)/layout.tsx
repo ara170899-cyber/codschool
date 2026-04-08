@@ -5,6 +5,7 @@ import { Navbar } from "@/components/navbar";
 import { Sidebar } from "@/components/sidebar";
 import { EgeSidebar } from "@/components/ege-sidebar";
 import { ProgressProvider } from "@/components/progress-provider";
+import { LanguageProvider } from "@/components/language-provider";
 
 export default function DashboardLayout({
   children,
@@ -17,15 +18,17 @@ export default function DashboardLayout({
   const showEgeSidebar = pathname.startsWith("/course/ege-math");
 
   return (
-    <ProgressProvider>
-      <div className="min-h-screen bg-gray-950">
-        <Navbar />
-        <div className="flex">
-          {showPythonSidebar && <Sidebar />}
-          {showEgeSidebar && <EgeSidebar />}
-          <main className="flex-1 p-6">{children}</main>
+    <LanguageProvider>
+      <ProgressProvider>
+        <div className="min-h-screen bg-gray-950">
+          <Navbar />
+          <div className="flex">
+            {showPythonSidebar && <Sidebar />}
+            {showEgeSidebar && <EgeSidebar />}
+            <main className="flex-1 p-6">{children}</main>
+          </div>
         </div>
-      </div>
-    </ProgressProvider>
+      </ProgressProvider>
+    </LanguageProvider>
   );
 }
